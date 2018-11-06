@@ -1,0 +1,21 @@
+// bower:scss
+@import "bower_components/bootstrap/scss/bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+@import "header";
+@import "side-bar";
+@import "main-content";
+@import "filter";
+@import "main-tabs";
+@import "main-table";
+@import "table-footer";
+
+html, body{
+	height: 100%;
+}
+.main{
+	height: calc(100% - 61px);
+}
+body{
+	background: #dedede;
+}

@@ -1,0 +1,110 @@
+$primary: #000;
+$lightGrey: #000;
+
+.switch {
+    height: 24px;
+    display: block;
+    position: relative;
+    cursor: pointer; 
+    margin-bottom: 0;
+    input {
+        display: none;
+        & + span {
+            padding-left: 50px;
+            margin-left: 8px;
+            min-height: 24px;
+            line-height: 24px;
+            display: block;
+            color: $lightGrey;
+            position: relative;
+            vertical-align: middle;
+            white-space: nowrap;
+            transition: color .3s ease;
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                border-radius: 12px;
+            }
+            &:before {
+                top: 0;
+                left: 0;
+                width: 42px;
+                height: 24px;
+                background: $primary;
+                transition: all .3s ease;
+            }
+            &:after {
+                width: 18px;
+                height: 18px;
+                background: #fff;
+                top: 3px;
+                left: 3px;
+                box-shadow: 0 1px 3px rgba(#121621, .1);
+                transition: all .45s ease;
+            }
+            
+            strong {
+                font-weight: normal;
+                position: relative;
+                display: block;
+                top: 1px;
+                &:before,
+                &:after {
+                    font-size: 14px;
+                    font-weight: 500;
+                    display: block;
+                    font-family: 'Mukta Malar', Arial;
+                    -webkit-backface-visibility: hidden;
+                }
+                
+            }
+        }
+        &:checked {
+            & + span {
+                &:before { 
+                    background: $primary;
+                }
+                &:after {
+                    background: #fff;
+                    transform: translate(18px, 0);
+                }
+                
+                strong {
+                    &:before {
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all .3s ease;
+                        transform: translate(-2px, 0);
+                    }
+                    &:after {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translate(0, 0);
+                        transition: all .3s ease .2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.category{
+    select,select:active,select:focus{
+        background: transparent;
+        border:0;
+        outline: none;
+        box-shadow: none;
+
+    }
+}
+.filter-date{
+    .form-control,.form-control:active,.form-control:focus{
+        background: transparent;
+        border-radius: 0;
+        border-color: #000;
+    }
+}

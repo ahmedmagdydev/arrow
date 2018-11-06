@@ -1,0 +1,211 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>html</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/daterangepicker/daterangepicker.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <!-- inject:/src/partials/header.html -->
+              <!-- contents of html partials will be injected here -->
+              <!-- endinject -->
+    <div class="main ">
+     
+
+      <!-- inject:/src/partials/side-menu.html -->
+              <!-- contents of html partials will be injected here -->
+              <!-- endinject -->
+      <div class="container-fluid main-content">
+        <div class="d-flex my-3">
+          <h2 class="mr-auto">Home</h2>
+          <div class="filter-wrapper d-flex align-items-center">
+
+            <label class="switch d-flex mx-3">
+            <span>Personal</span>
+                 <input type="checkbox">
+                 <span>
+                     <strong></strong>
+                 </span>
+            <span>Department</span>
+             </label>
+             <div class="category mx-3">
+               <select name="" id="" class="form-control">
+                 <option value="">All Departments</option>
+                 <option value=""> Departments</option>
+                 <option value="">All </option>
+               </select>
+             </div>
+             <div class="filter-date ml-3">
+               <div id="reportrange" class="form-control">
+                   <span></span> 
+                   <i class="fa fa-calendar"></i>&nbsp;
+               </div>
+             </div>
+          </div>
+        </div>
+
+       <ul class="nav nav-fill main-tabs" id="myTab" role="tablist">
+         <li class="nav-item large">
+           <a class="nav-link clearfix d-flex align-items-center active" id="new-tab" data-toggle="tab" href="#new" role="tab" aria-controls="new" aria-selected="true">
+             <span class="tab-detail">
+              <p class="number">18</p>
+                <img src="images/mail.svg" alt="">
+                <p class="tab-name">Done</p>
+                <p>Correspondence </p> 
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div> 
+             </span>
+             <div class="tab-chart">
+               <canvas id="newChart" width="320" height="130"></canvas>
+
+             </div>
+           </a>
+         </li> 
+         <li class="nav-item">
+           <a class="nav-link clearfix d-flex align-items-center" id="done-tab" data-toggle="tab" href="#done" role="tab" aria-controls="done" aria-selected="false">
+             <span class="tab-detail">
+              <p class="number">18</p>
+                <img src="images/mail.svg" alt="">
+                <p class="tab-name">Done</p>
+                <p>Correspondence </p>  
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+             </span>
+             <span class="tab-chart">
+               <canvas id="doneChart" width="320" height="130"></canvas>
+             </span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link clearfix d-flex align-items-center" id="waiting-tab" data-toggle="tab" href="#waiting" role="tab" aria-controls="waiting" aria-selected="false">
+             <span class="tab-detail">
+              <p class="number">18</p>
+                <img src="images/mail.svg" alt="">
+                <p class="tab-name">Done</p>
+                <p>Correspondence </p>  
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+             </span>
+             <span class="tab-chart">
+               <canvas id="waitingChart" width="320" height="130"></canvas>
+               
+             </span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link clearfix d-flex align-items-center" id="assigned-tab" data-toggle="tab" href="#assigned" role="tab" aria-controls="assigned" aria-selected="false">
+             <span class="tab-detail">
+              <p class="number">18</p>
+                <img src="images/mail.svg" alt="">
+                <p class="tab-name">Done</p>
+                <p>Correspondence </p>  
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25% </div>
+                </div>
+             </span>
+             <span class="tab-chart">
+               <canvas id="assignedChart" width="320" height="130"></canvas>
+               
+             </span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link clearfix d-flex align-items-center" id="delayed-tab" data-toggle="tab" href="#delayed" role="tab" aria-controls="delayed" aria-selected="false">
+             <span class="tab-detail">
+              <p class="number">18</p>
+                <img src="images/mail.svg" alt="">
+                <p class="tab-name">Done</p>
+                <p>Correspondence </p>  
+                <div class="progress">
+                </div>
+             </span>
+             <span class="tab-chart">
+               <canvas id="delayedChart" width="320" height="130"></canvas>
+               
+             </span>
+           </a> 
+         </li>
+       </ul>
+       <div class="tab-content" id="myTabContent">
+         <div class="tab-pane fade show active" id="new" role="tabpanel" aria-labelledby="home-tab">
+
+            <!-- inject:/src/partials/home-table.html -->
+              <!-- contents of html partials will be injected here -->
+              <!-- endinject -->
+
+              <!-- inject:/src/partials/footer-table.html -->
+              <!-- contents of html partials will be injected here -->
+              <!-- endinject -->
+           
+         </div>
+         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">asd.</div>
+         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+       </div>
+        
+      </div>
+    </div>
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/popper.js/dist/umd/popper.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/daterangepicker/daterangepicker.js"></script>
+    <script src="/bower_components/chart.js/dist/Chart.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
