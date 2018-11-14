@@ -1,5 +1,229 @@
-<div class="table-responsive">
-  <table class="table  table-condensed table-main" style="border-collapse:collapse;">
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>html</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+
+    
+    
+    <link rel="stylesheet" href="styles/vendor.css">
+    
+    
+
+    
+    <link rel="stylesheet" href="styles/main.css">
+    
+    
+    
+    <script src="scripts/vendor/modernizr.js"></script>
+    
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    
+              <header>
+      <nav class="navbar navbar-expand-lg align-items-center">
+        
+
+        <ul class="navbar-nav mr-auto align-items-center">
+          <li class="nav-item active">
+            <a class="nav-link toggle-menu" href="#"><i class="fa fa-bars"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="images/arrow.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="images/logo.png" alt=""></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="fa fa-bell"></i></a>
+          </li>
+          <li class="nav-seperate"></li>
+          <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user-circle"></i>
+               User Name
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Another action</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Something else here</a>
+             </div>
+           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-gear"></i></a>
+          </li>
+          <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               EN
+             </a>
+             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item" href="#">Action</a>
+               <a class="dropdown-item" href="#">Another action</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Something else here</a>
+             </div>
+           </li>
+        </ul>
+      </nav>
+    </header>
+              
+    <div class="main">
+     
+
+      
+               <aside>
+        <ul class="side-menu">
+          <li class="active"><a href="#" class="home">home</a>
+            <ul>
+              <li><a href="#"><img src="images/report.svg" alt="">reports</a></li>
+              <li><a href="#"><img src="images/dashboard.svg" alt="">dashboard</a></li>
+              <li><a href="#"><img src="images/custom.svg" alt="">custom report</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="correspondence">correspondence</a></li>
+          <li><a href="#" class="address">address book</a></li>
+          <li><a href="#" class="reports">reports</a></li>
+          <li><a href="#" class="search">search</a></li>
+          <li><a href="#" class="tasks">tasks</a></li>
+          <li><a href="#" class="monitor">monitor</a></li>
+        </ul>
+      </aside>
+              
+      <div class="container-fluid main-content">
+        <div class="d-flex my-3">
+          <h2 class="mr-auto">Home</h2>
+          <div class="filter-wrapper d-flex align-items-center">
+
+            <label class="switch d-flex mx-3">
+            <span>Personal</span>
+                 <input type="checkbox">
+                 <span>
+                     <strong></strong>
+                 </span>
+            <span>Department</span>
+             </label>
+             <div class="category mx-3">
+               <select name="" class="form-control">
+                 <option value="">All Departments</option>
+                 <option value=""> Departments</option>
+                 <option value="">All </option>
+               </select>
+             </div>
+             <div class="filter-date ml-3">
+               <div id="reportrange" class="form-control">
+                   <span></span> 
+                   <i class="fa fa-calendar"></i>&nbsp;
+               </div>
+             </div>
+          </div>
+        </div>
+
+       <ul class="nav nav-fill main-tabs" id="myTab" role="tablist">
+         <li class="nav-item large">
+           <a class="nav-link clearfix d-flex align-items-center active" id="new-tab" data-toggle="tab" href="#new" role="tab" aria-controls="new" aria-selected="true">
+             <span class="tab-detail">
+              <p class="number">18</p>
+                <span class="icon-new"></span>
+                <p class="tab-name">new</p>
+                <p>Correspondence </p> 
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width:25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div> 
+             </span>
+             <div class="tab-chart">
+               <canvas id="newChart" width="320" height="130"></canvas>
+
+             </div>
+           </a>
+         </li> 
+         <li class="nav-item">
+           <a class="nav-link clearfix d-flex align-items-center" id="done-tab" data-toggle="tab" href="#done" role="tab" aria-controls="done" aria-selected="false">
+             <span class="tab-detail">
+              <p class="number">18</p>
+                <span class="icon-done"></span>
+                <p class="tab-name">Done</p>
+                <p>Correspondence </p>  
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width:25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+             </span>
+             <span class="tab-chart">
+               <canvas id="doneChart" width="320" height="130"></canvas>
+             </span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link clearfix d-flex align-items-center" id="waiting-tab" data-toggle="tab" href="#waiting" role="tab" aria-controls="waiting" aria-selected="false">
+             <span class="tab-detail">
+              <p class="number">18</p>
+                <span class="icon-assigned"></span>
+                <p class="tab-name">assigned</p>
+                <p>Correspondence </p>  
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width:25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+             </span>
+             <span class="tab-chart">
+               <canvas id="waitingChart" width="320" height="130"></canvas>
+               
+             </span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link clearfix d-flex align-items-center" id="assigned-tab" data-toggle="tab" href="#assigned" role="tab" aria-controls="assigned" aria-selected="false">
+             <span class="tab-detail">
+              <p class="number">18</p>
+                <span class="icon-waiting"></span>
+                <p class="tab-name">waiting</p>
+                <p>Correspondence </p>  
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width:25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25% </div>
+                </div>
+             </span>
+             <span class="tab-chart">
+               <canvas id="assignedChart" width="320" height="130"></canvas>
+               
+             </span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link clearfix d-flex align-items-center" id="delayed-tab" data-toggle="tab" href="#delayed" role="tab" aria-controls="delayed" aria-selected="false">
+             <span class="tab-detail">
+              <p class="number">18</p>
+                <span class="icon-delayed"></span>
+                <p class="tab-name">delayed</p>
+                <p>Correspondence </p>  
+                <div class="progress">
+                </div>
+             </span>
+             <span class="tab-chart">
+               <canvas id="delayedChart" width="320" height="130"></canvas>
+               
+             </span>
+           </a> 
+         </li>
+       </ul>
+       <div class="tab-content" id="myTabContent">
+         <div class="tab-pane fade show active" id="new" role="tabpanel" aria-labelledby="home-tab">
+
+            
+              <div class="table-responsive">
+  <table class="table table-condensed table-main" style="border-collapse:collapse">
   
                 <thead>
                     <tr><th>Priority  </th>
@@ -33,7 +257,7 @@
                       <span><i class="fa"></i></span></td>
                       <td> Internal treatment</td>
                       <td>
-                        <div class=" dropleft ">
+                        <div class="dropleft">
                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-ellipsis-v"></i>
                           </a>
@@ -113,7 +337,7 @@
                       <span><i class="fa"></i></span></td>
                       <td> Internal treatment</td>
                       <td>
-                        <div class=" dropleft ">
+                        <div class="dropleft">
                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-ellipsis-v"></i>
                           </a>
@@ -126,9 +350,9 @@
                       </td>
                     </tr>
                     <tr>
-                        <td colspan="8" class="hiddenRow"><div id="row2" class="accordian-body collapse " data-parent="#new">Demo3</div></td>
+                        <td colspan="8" class="hiddenRow"><div id="row2" class="accordian-body collapse" data-parent="#new">Demo3</div></td>
                     </tr>
-                    <tr data-toggle="collapse" data-target="#row3" class="accordion-toggle collapsed ">
+                    <tr data-toggle="collapse" data-target="#row3" class="accordion-toggle collapsed">
                         <td>
                           <span class="priority priority-3"><span></span>
                           <span></span>
@@ -147,7 +371,7 @@
                       <span><i class="fa"></i></span></td>
                       <td> Internal treatment</td>
                       <td>
-                        <div class=" dropleft ">
+                        <div class="dropleft">
                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-ellipsis-v"></i>
                           </a>
@@ -181,7 +405,7 @@
                       <span><i class="fa"></i></span></td>
                       <td> Internal treatment</td>
                       <td>
-                        <div class=" dropleft ">
+                        <div class="dropleft">
                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-ellipsis-v"></i>
                           </a>
@@ -220,7 +444,7 @@
                       <span><i class="fa"></i></span></td>
                       <td> Internal treatment</td>
                       <td>
-                        <div class=" dropleft ">
+                        <div class="dropleft">
                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-ellipsis-v"></i>
                           </a>
@@ -254,7 +478,7 @@
                       <span><i class="fa"></i></span></td>
                       <td> Internal treatment</td>
                       <td>
-                        <div class=" dropleft ">
+                        <div class="dropleft">
                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-ellipsis-v"></i>
                           </a>
@@ -288,7 +512,7 @@
                       <span><i class="fa"></i></span></td>
                       <td> Internal treatment</td>
                       <td>
-                        <div class=" dropleft ">
+                        <div class="dropleft">
                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-ellipsis-v"></i>
                           </a>
@@ -306,3 +530,50 @@
                 </tbody>
             </table>
 </div>
+              
+
+              
+              <div class="table-footer">
+   <div class="d-flex">
+   	<nav aria-label="Page navigation example">
+   	  <ul class="pagination">
+   	    <li class="page-item"><a class="page-link" href="#">&lt;</a></li>
+   	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+   	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+   	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+   	    <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+   	  </ul>
+   	</nav>
+
+   </div>
+  </div>
+              
+           
+         </div>
+         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">asd.</div>
+         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+       </div>
+        
+      </div>
+    </div>
+    
+    
+    <script>!function(e,a,t,n,g,c){e.GoogleAnalyticsObject=n,e.ga||(e.ga=function(){(e.ga.q=e.ga.q||[]).push(arguments)}),e.ga.l=+new Date,g=a.createElement(t),c=a.getElementsByTagName(t)[0],g.src="https://www.google-analytics.com/analytics.js",c.parentNode.insertBefore(g,c)}(window,document,"script","ga"),ga("create","UA-XXXXX-X"),ga("send","pageview")</script>
+
+    
+    
+    <script src="scripts/vendor.js"></script>
+
+    
+    
+    
+    
+    <script src="scripts/plugins.js"></script>
+
+    
+    
+    
+    <script src="scripts/main.js"></script>
+    
+  </body>
+</html>

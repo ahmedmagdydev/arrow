@@ -2,30 +2,32 @@
 function displayChart(chartId) {
 	var chartId = new Chart(document.getElementById(chartId).getContext('2d'), {
 	       type: 'doughnut',
+
 	       data: {
-	           labels: ["Red", "Blue", "Yellow", "Green"],
+	           labels: ['Red', 'Blue', 'Yellow', 'Green'],
 	           datasets: [{
 	               label: '# of Votes',
-	               data: [12, 19, 3, 5],
+	               data: [12, 5,10,20],
 	               backgroundColor: [
-	                   '#ffffff',
-	                   '#dcdcdc',
-	                   '#a7a7a7',
-	                   '#bbbbbb'
+	                   '#00dc77',
+	                   '#ffae00',
+	                   '#fd4242',
+	                   '#dadde1'
 	               ],
 	               borderWidth:0
 	           }]
 	       },
 	       options: {
+	       	cutoutPercentage:80,
 	           scales: {
 	               
 	           },
 	           legend: {
-	           	position:"right",
+	           	position:'right',
 	           	labels:{
 	           		
 	           		usePointStyle:true,
-	           		fontColor: '#e3e3e3',
+	           		fontColor: '#000',
 	           		generateLabels: function(chart) {
 	           		  var data = chart.data;
 	           		  if (data.labels.length && data.datasets.length) {
@@ -35,10 +37,11 @@ function displayChart(chartId) {
 	           		      // console.log(ds)
 	           		         return {
 	           		        // And finally : 
-	           		        text: ds.data[i] + " " + label,
+	           		        text: ds.data[i] + ' ' + label,
 	           		        index: i,
 	           		        strokeStyle:ds.backgroundColor[i],
-	           		        lineWidth:1
+	           		        lineWidth:3,
+	           		        fillStyle:'#fff'
 	           		      };
 	           		    });
 	           		  }
@@ -49,6 +52,7 @@ function displayChart(chartId) {
 	           }
 	       }
 	   });
+	console.log(chartId)
 }
 
 function removeChart(chartsId){
@@ -94,8 +98,8 @@ jQuery(document).ready(function($) {
 	   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 	     $(e.target).parent().addClass('large') // newly activated tab
 	     $(e.relatedTarget).parent().removeClass('large')
-	     console.log($("#"+$(e.relatedTarget).attr('aria-controls')+"Chart"))
-	     $("#"+$(e.relatedTarget).attr('aria-controls')+"Chart")
+	     console.log($('#'+$(e.relatedTarget).attr('aria-controls')+'Chart'))
+	     $('#'+$(e.relatedTarget).attr('aria-controls')+'Chart')
 	     setTimeout(function() {
 	     	displayChart($(e.target).attr('aria-controls')+'Chart')
 	     	

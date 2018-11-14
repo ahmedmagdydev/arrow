@@ -3,13 +3,55 @@
 		transition:all .2s ease-out;
 		width: 174px;
 		.nav-link{
-			background: #ededed;
+			background: #fcfcfe;
 			margin-right: 8px;
 			color: #555555;
+			border-radius: 8px;
+			box-shadow: 0 1px 13px 7px #e9e9e9;
+			&[href="#new"]{
+				[class^="icon-"], [class*=" icon-"]{
+					color: $primary-color;
+				}
+				.progress-bar{
+					background-color:  $primary-color;
+				}
+			}
+			&[href="#done"]{
+				[class^="icon-"], [class*=" icon-"]{
+					color: $secondry-color;
+				}
+				.progress-bar{
+					background-color:  $secondry-color;
+				}
+			}
+			&[href="#assigned"]{
+				[class^="icon-"], [class*=" icon-"]{
+					color: #e666fb;
+				}
+				.progress-bar{
+					background-color:  #e666fb;
+				}
+			}
+			&[href="#waiting"]{
+				[class^="icon-"], [class*=" icon-"]{
+					color: #ff9c00;
+				}
+				.progress-bar{
+					background-color:  #ff9c00;
+				}
+			}
+			&[href="#delayed"]{
+				[class^="icon-"], [class*=" icon-"]{
+					color: #f5282f;
+				}
+				.progress{
+					background-color: transparent;
+				}
+			}
 		}
 		&:last-child .nav-link{
 			margin-right: 0;
-		}
+		} 
 		.tab-detail{
 			width: 100%;
 			display: block;
@@ -21,6 +63,9 @@
 			.tab-name{
 				font-size: 22px;
 				margin-top: 5px;margin-bottom: 0;
+			}
+			[class^="icon-"], [class*=" icon-"]{
+				font-size: 50px; 
 			}
 		}
 		.tab-chart{
@@ -37,14 +82,14 @@
 			    height: 0;
 			    border-style: solid;
 			    border-width: 11px 12px 0 12px;
-			    border-color: #282828 transparent transparent transparent;
+			    border-color: #fff transparent transparent transparent;
 			    position: absolute;
 			    left: 35px;
 			    top: 100%;
 			}
 			a{
-				background: #282828;
-				color: #fff;
+				background: #fff;
+				color: #000;
 			}
 			.tab-detail{
 				width: 170px;

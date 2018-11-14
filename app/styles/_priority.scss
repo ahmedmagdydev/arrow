@@ -1,0 +1,27 @@
+.priority{
+	width: 33px;
+	height: 33px;
+	display: block;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: auto;
+	padding: 5px;
+	text-align: center;
+	box-shadow: -0.261px 2.989px 8px 0px rgba(15, 114, 215, 0.2);
+	& > span{
+		width: 8px;
+		height: 2px;
+		display: block;
+		background-color: #dadde1;
+		margin: 1px auto;
+	}
+	@for $i from 1 through 7 {
+	  &.priority-#{$i} { 
+	  	& span:nth-child(#{$i}){
+	  		width: 20px;
+	  	}
+	  }
+	}
+}
+
+

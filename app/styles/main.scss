@@ -2,13 +2,17 @@
 @import "bower_components/bootstrap/scss/bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
+@import "icons";
+@import "colors";
 @import "header";
 @import "side-bar";
 @import "main-content";
 @import "filter";
 @import "main-tabs";
 @import "main-table";
-@import "table-footer";
+@import "table-footer"; 
+@import "priority"; 
+@import "pagination"; 
 
 html, body{
 	height: 100%;
@@ -17,5 +21,5 @@ html, body{
 	height: calc(100% - 61px);
 }
 body{
-	background: #dedede;
+	background: #f5f6fa;
 }
